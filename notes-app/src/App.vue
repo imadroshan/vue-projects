@@ -3,6 +3,7 @@
 
   const showModal = ref(false);
   const newNote = ref("");
+  const errorMessage = ref ("");
   const notes = ref([]);
 
   function getRandomColor(){
@@ -11,6 +12,9 @@
   }
 
   const addNote = () => {
+    if (newNote.value.length < 10){
+      return errorMessage.value = "Note needs to be at least 10 Charaters";
+    }
     notes.value.push({
       id: Math.floor(Math.random() * 1000000),
       text: newNote.value,
@@ -19,14 +23,16 @@
     });
     showModal.value = false;
     newNote.value = "";
-  }
-;
+    errorMessage.value = "";
+  };
+
 </script>
 <template>
   <main>
     <div v-if="showModal" class="overlay">
       <div class="modal">
-        <textarea v-model="newNote" name="note" id="note" cols="30" rows="10"></textarea>
+        <textarea v-model.trim="newNote" name="note" id="note" cols="30" rows="10"></textarea>
+        <p v-if="errorMessage">{{errorMessage}}</p>
         <button @click="addNote">Add Note</button>
         <button class="close" @click="showModal = false">Close</button>
       </div>
@@ -37,7 +43,7 @@
         <button @click="showModal = true"> + </button>
       </header>
       <div class="cards-container">
-        <div v-for="note in notes" class="card" :style="{backgroundColor: note.backgroundColor}">
+        <div v-for="note in notes" :key="note.id" class="card" :style="{backgroundColor: note.backgroundColor}">
           <p class="main-text"> {{note.text}} </p>
           <p class="date">{{note.date.toLocaleDateString("en-US")}}</p>
         </div>
@@ -145,6 +151,10 @@
   .modal .close {
     background-color: rgb(153, 16, 16);
     margin-top: 7px;
+  }
+
+  .modal p {
+    color: red;
   }
 
 </style>
