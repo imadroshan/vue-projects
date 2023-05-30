@@ -13,7 +13,7 @@
   const addNote = () => {
     notes.value.push({
       id: Math.floor(Math.random() * 1000000),
-      text: newNote,
+      text: newNote.value,
       date: new Date(),
       backgroundColor: getRandomColor()
     });
@@ -37,9 +37,9 @@
         <button @click="showModal = true"> + </button>
       </header>
       <div class="cards-container">
-        <div class="card">
-          <p class="main-text"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo provident tempora suscipit doloribus earum voluptatem. </p>
-          <p class="date">04/27/6853</p>
+        <div v-for="note in notes" class="card" :style="{backgroundColor: note.backgroundColor}">
+          <p class="main-text"> {{note.text}} </p>
+          <p class="date">{{note.date.toLocaleDateString("en-US")}}</p>
         </div>
       </div>
     </div>
