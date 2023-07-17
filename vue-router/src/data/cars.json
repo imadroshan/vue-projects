@@ -1,0 +1,55 @@
+[
+    {
+        "id": 1,
+        "name": "chevy",
+        "price": 15000,
+        "year" : 2015,
+        "contact": {
+            "dealer": "Imad",
+            "number": "111-111-1111 "
+        }
+    },
+
+    {
+        "id": 2,
+        "name": "Bentley",
+        "price": 15000,
+        "year" : 2015,
+        "contact": {
+            "dealer": "Hammad",
+            "number": "222-111-111 "
+        }
+    },
+
+    {
+        "id": 3,
+        "name": "Ford",
+        "price": 15000,
+        "year" : 2015,
+        "contact": {
+            "dealer": "Laith",
+            "number": "333-333-3333 "
+        }
+    },
+
+    {
+        "id": 4,
+        "name": "Audi",
+        "price": 15000,
+        "year" : 2015,
+        "contact": {
+            "dealer": "Imad Roshan",
+            "number": "444-444-1114 "
+        }
+    },
+    {
+        "id": 5,
+        "name": "Land Lover",
+        "price": 15000,
+        "year" : 2015,
+        "contact": {
+            "dealer": "Imad",
+            "number": "111-111-111 "
+        }
+    }
+]
