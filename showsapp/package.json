@@ -1,5 +1,5 @@
 {
-  "name": "quiz-app",
+  "name": "showsapp",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,11 +8,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.3.4",
-    "vue-router": "^4.2.4"
+    "axios": "^1.4.0",
+    "vue": "^3.3.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.2.3",
-    "vite": "^4.3.9"
+    "naive-ui": "^2.34.4",
+    "vite": "^4.4.6"
   }
 }
