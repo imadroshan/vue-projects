@@ -1,0 +1,6 @@
+@import './base.css';
+
+.line {
+    width: 100%;
+    border-bottom: 2px solid black;
+}
