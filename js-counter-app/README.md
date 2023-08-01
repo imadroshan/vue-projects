@@ -6,6 +6,8 @@ This is a very simple JS Vanilla Counter App. I made it so, I can cross-referenc
 
 No installation is required. You can run this app simply by using the Live Server in your VSCode. Just open this js-counter-app directory in your VSCode, click on the Live-Server and you would be able to see the counter app in your Browser on the localhost. 
 
+## Merge
+
 
 ## Contributing
 
